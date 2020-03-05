@@ -1,4 +1,4 @@
-# AsyncLSD: Asynchrnous Lagrangian Scenario Decomposition
+# AsyncLSD: Asynchronous Lagrangian Scenario Decomposition
 
 Implementents asynchronous Lagrangian scenario decomposition for two-stage mixed integer programs with (weak) relatively complete recourse. 
 
