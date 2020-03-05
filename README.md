@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/245032003.svg)](https://zenodo.org/badge/latestdoi/245032003)
+
 # AsyncLSD: Asynchronous Lagrangian Scenario Decomposition
 
 Implementents asynchronous Lagrangian scenario decomposition for two-stage mixed integer programs with (weak) relatively complete recourse. 
