@@ -40,7 +40,7 @@ along with AsyncLSD. If not, see <https://www.gnu.org/licenses/>.
 	#define DFR_COLTYPE_STRBUFF			104		// string_buffer structure
 	
 	// Time measuring
-	#define NANOSEC2SEC					1E-9
+	#define NANOSEC2SEC				1E-9
 	
 	/* STRUCTS */
 	typedef struct string_buffer

@@ -68,10 +68,10 @@ along with AsyncLSD. If not, see <https://www.gnu.org/licenses/>.
 	#define SMPS_ENDDATA				"ENDATA"
 	
 	// Constants used in calls to Xpress
-	#define uXPRS_NAMELENGTH_DEF		8		// see definition of NAMELENGTH in Xpress manual
+	#define uXPRS_NAMELENGTH_DEF			8		// see definition of NAMELENGTH in Xpress manual
 	
 	// Other constants
-	#define DBL_EPSILON					1E-8 	// epsilon for double comparison
+	#define DBL_EPSILON				1E-8	 	// epsilon for double comparison
 	
 	// 7z executable directory
 	#if (defined _WIN32 || defined _WIN64 || defined __WINDOWS__)

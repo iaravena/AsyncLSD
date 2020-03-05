@@ -45,49 +45,49 @@ along with AsyncLSD. If not, see <https://www.gnu.org/licenses/>.
 	/* CONSTANTS */
 	
 	// Decomposition constants
-	#define DECOMP_INFINITY				1E+12		// Infty for initiliazing bounds
-	#define MAX_WORKERS_PER_SCENARIO	3			// program will stop if there are more than this amounts of workers per scenario
-	#define MAX_LENGTH_CRITICAL_QUEUE	5			// maximum lenght of the critical queue, in terms of the number of primal workers
-	#define QNORM95						1.644854	// 95% quantile of standard gaussian distribution
-	#define NO_UPDATE_SCALING			0.0
+	#define DECOMP_INFINITY			1E+12		// Infty for initiliazing bounds
+	#define MAX_WORKERS_PER_SCENARIO	3		// program will stop if there are more than this amounts of workers per scenario
+	#define MAX_LENGTH_CRITICAL_QUEUE	5		// maximum lenght of the critical queue, in terms of the number of primal workers
+	#define QNORM95				1.644854	// 95% quantile of standard gaussian distribution
+	#define NO_UPDATE_SCALING		0.0
 	
 	// Identifier for non-scenario and non-candidate tasks
-	#define NOSCENID					-1
-	#define NOCANDID					-2
-	#define NO_PREVIOUS_WORKER			-10
+	#define NOSCENID			-1
+	#define NOCANDID			-2
+	#define NO_PREVIOUS_WORKER		-10
 	
 	// Next job identifiers
-	#define NEXT_COMES_DUAL				0
-	#define NEXT_COMES_PRIMAL			1
+	#define NEXT_COMES_DUAL			0
+	#define NEXT_COMES_PRIMAL		1
 	
 	// Candidate status tags
-	#define CANDIDATE_FREE_SLOT			0
-	#define CANDIDATE_READY				1
-	#define CANDIDATE_ACTIVE			2
-	#define CANDIDATE_EVALUATED			3
+	#define CANDIDATE_FREE_SLOT		0
+	#define CANDIDATE_READY			1
+	#define CANDIDATE_ACTIVE		2
+	#define CANDIDATE_EVALUATED		3
 	
 	// Task types (used to tag MPI messages)
-	#define DUAL_SCEN_INIT				200			// Dual job: (ScenarioNum, x[])
-	#define DUAL_SCEN_MILP				201			// Dual job: (ScenarioNum, x[])
-	#define DUAL_NONSCEN_MILP			202			// Dual non scenario job: (NOSCENID, LBscen_delayed, msumx_delayed[], msumx_current[], ucenter[])
-	#define PRIMAL_FEAS_PROJ			203			// Primal job: (NOCANDID, NOSCENID, u[])
-	#define PRIMAL_SCEN_MILP			204			// Primal job: (CandidateID, ScenarioNum, u[])
+	#define DUAL_SCEN_INIT			200		// Dual job: (ScenarioNum, x[])
+	#define DUAL_SCEN_MILP			201		// Dual job: (ScenarioNum, x[])
+	#define DUAL_NONSCEN_MILP		202		// Dual non scenario job: (NOSCENID, LBscen_delayed, msumx_delayed[], msumx_current[], ucenter[])
+	#define PRIMAL_FEAS_PROJ		203		// Primal job: (NOCANDID, NOSCENID, u[])
+	#define PRIMAL_SCEN_MILP		204		// Primal job: (CandidateID, ScenarioNum, u[])
 	
 	// Result types (used to tag MPI messages)
-	#define RESULT_DUAL_SCEN_INIT		300			// Dual result: (ScenarioNum, XPRS status, worktime, +Infty, LB, u[])
-	#define RESULT_DUAL_SCEN_MILP		301			// Dual result: (ScenarioNum, XPRS status, worktime, Obj (UB), LB, u[])
-	#define RESULT_DUAL_NONSCEN_MILP	302			// Dual result: (NOSCENID, XPRS status, worktime, Obj (UB), LB stochastic program, u[])
-	#define RESULT_PRIMAL_FEAS_PROJ		203			// Primal projection job result: (CandidateID, worktime, u[])
-	#define RESULT_PRIMAL_SCEN_MILP		304			// Primal result: (CandidateID, ScenarioNum, XPRS status, worktime, Obj (UB), LB)
+	#define RESULT_DUAL_SCEN_INIT		300		// Dual result: (ScenarioNum, XPRS status, worktime, +Infty, LB, u[])
+	#define RESULT_DUAL_SCEN_MILP		301		// Dual result: (ScenarioNum, XPRS status, worktime, Obj (UB), LB, u[])
+	#define RESULT_DUAL_NONSCEN_MILP	302		// Dual result: (NOSCENID, XPRS status, worktime, Obj (UB), LB stochastic program, u[])
+	#define RESULT_PRIMAL_FEAS_PROJ		203		// Primal projection job result: (CandidateID, worktime, u[])
+	#define RESULT_PRIMAL_SCEN_MILP		304		// Primal result: (CandidateID, ScenarioNum, XPRS status, worktime, Obj (UB), LB)
 	
 	// Other messages
-	#define RELEASE_WORKER				401
+	#define RELEASE_WORKER			401
 	
 	// Worker status
-	#define WORKER_COORDINATOR			1000
-	#define WORKER_FREE					1001
-	#define WORKER_BUSY_DUAL			1002
-	#define WORKER_BUSY_PRIMAL			1003
+	#define WORKER_COORDINATOR		1000
+	#define WORKER_FREE			1001
+	#define WORKER_BUSY_DUAL		1002
+	#define WORKER_BUSY_PRIMAL		1003
 	
 	/* STRUCTS */
 	typedef struct generic_job
