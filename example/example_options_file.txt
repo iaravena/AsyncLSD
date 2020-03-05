@@ -1,0 +1,41 @@
+# Prototype options file:
+# Fixed column positions: names 5 and values 25
+# Order of sections must be respected.
+# Order of params within GENERAL section must also be respected.
+# All parameters in GENERAL section must be input,
+# even if they are not necessary.
+GENERAL
+    VERBOSITY           2         # VERB_COORDINATOR_FUNCS
+    MAXITER             200
+    MAXTIME             1800
+    DSHARE_MIDITER      0.5
+    DSHARE_START        0.5
+    DSHARE_END          0.5
+    NONSCEN_PERIOD      0.1
+    NONSCEN_CENTER      11        # use incumbent as center
+    DUAL_STEPSIZE       22        # DUAL_STEPSIZE_POLYAK: p/(1+r*k)^q*min(xi*f(x), fup - f(x))/max(sigma, |g|^2_2)
+    DUAL_STEPSIZE_P     .5        # 0.5 at the beggining
+    DUAL_STEPSIZE_R     0.02      # 0.25 at 50 passes over data
+    DUAL_STEPSIZE_Q     1.0       # decreasing at 1/k
+    DUAL_STEPSIZE_XI    0.025
+    DUAL_STEPSIZE_SGM   1E-8
+    DUAL_GNORM_FILTER   0.1
+    PRIMAL_RECOVERY     33        # PRIMAL_RECOVERY_IS
+    PRIMAL_IS_SSIZE     0.5
+    INIT_TYPE           41        # initialization by period relaxation
+    DUAL_GAP_TOL        0.01
+    SMOOTHING_PARAM     0.1
+    PROJ_ROUND_MIDP     0.4
+    PERIOD_AGG_POL      52        # aggregating by max (this should be used for UC)
+    SCEN_LP_ALG         b         # barrier algorithm
+    PERIOD_LP_ALG       b         # barrier algorithm
+XPRESS_SCEN_INT
+    8278                2         # XPRS_THREADS
+    8020                180       # XPRS_MAXTIME
+XPRESS_SCEN_DBL
+    7020                0.01      # XPRS_MIPRELSTOP
+XPRESS_PERIOD_INT
+    8278                2         # XPRS_THREADS
+    8020                10        # XPRS_MAXTIME
+XPRESS_PERIOD_DBL
+    7020                0.005     # XPRS_MIPRELSTOP
