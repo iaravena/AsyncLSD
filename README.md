@@ -35,7 +35,7 @@ In High Performance Computing (HPC) clusters you might need to replace `mpiexec`
 
 ## Citation
 
-If you find AsyncLSD useful in your work, we kindly request that you cite the following paper:
+If you find AsyncLSD useful in your work, we kindly request that you cite the [following paper](https://doi.org/10.1007/s12532-020-00185-4):
 
 ```
 @article{AravenaPapavasiliou2020,
@@ -46,7 +46,7 @@ volume = {},
 number = {},
 pages = {},
 year = {2020},
-doi = {},
+doi = {10.1007/s12532-020-00185-4},
 }
 ```
 
